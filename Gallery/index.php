@@ -1,20 +1,21 @@
 <?php
-    function gallery(){
+    function gallery($path='/', $exe='jpg'){
+        $array = glob($path."/*.{".$exe."}");
         $result = '';
-        $directory = 'img';
-        $array = glob($directory."/*.jpg", GLOB_BRACE);
-
-        foreach($array as $key => $imagepath){
-         $result = '<img class="img" src="'.$imagepath.'">';
+        foreach ($array as $a)
+        {
+            $result = '<img src="'.$a.'">';
         }
         return $result;
     }
+
+    $gallery = gallery('img','jpg')
     ?>
 <html lang="en">
     <head>
         <title>Gallery</title>
     </head>
     <body>
-        <?php gallery() ?>
+        <?php $gallery ?>
     </body>
 </html>
