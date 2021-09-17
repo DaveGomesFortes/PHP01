@@ -7,15 +7,6 @@
             $result.= '<img src="'.$a.'">';
         }
         return $result;
-    }
-
+}
     $gallery = gallery('img', 'jpg')
-    ?>
-<html lang="en">
-    <head>
-        <title>Gallery</title>
-    </head>
-    <body>
-        <?php echo $gallery ?>
-    </body>
-</html>
+?>
