@@ -8,5 +8,4 @@
         }
         return $result;
     }
-
-$i = css('css', 'css'); ?>
+    ?>

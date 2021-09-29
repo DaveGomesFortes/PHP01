@@ -1,9 +1,9 @@
 <?php
     function bootstrap(){
-        $array = glob('functions/*.php', GLOB_BRACE);
+        $array = glob('functions/*.php');
 
         foreach ($array as $a){
-            $result.= 'include($a)';
+            include_once $a;
         }
-        return $result;
+        return true;
     }
