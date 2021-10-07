@@ -1,9 +1,8 @@
 <?php
-    function fruit(){
+    function fruit($connectie){
         return '<h1>Fruit</h1>';
-        conn();
 
-        $result = mysqli_query(conn(), 'SELECT * FROM `fruit`');
+        $result = mysqli_query($connectie, select_all('fruit'));
 
         $array=[];
         if (mysqli_num_rows($result) > 0){

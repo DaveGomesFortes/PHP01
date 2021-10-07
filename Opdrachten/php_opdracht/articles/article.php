@@ -1,5 +1,5 @@
 <?php
     function article(){
-        return 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
+        return '<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
     }
     ?>

@@ -1,5 +1,5 @@
 <?php
-    function trigger(){
+    function trigger($db_conn){
         if (empty($_GET)){
             $_GET['action'] = 'home';
         }
@@ -11,5 +11,5 @@
         include('articles/'.$_GET['action'].'.php');
         $f = $_GET['action'];
 
-        return $f();
+        return $f($db_conn);
     }

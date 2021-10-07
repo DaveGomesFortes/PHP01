@@ -4,7 +4,7 @@
     $result = '';
     foreach ($array as $a)
     {
-        $result.= '<img src="'.$a.'">';
+        $result.= '<br><img src="'.$a.'">';
     }
     return $result;
 }
