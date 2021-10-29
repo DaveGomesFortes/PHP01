@@ -1,7 +1,6 @@
 <?php
-    function fruit($connectie){
-        return '<h1>Fruit</h1>';
-
+    function fruit(){
+        $connectie = conn();
         $result = mysqli_query($connectie, select_all('fruit'));
 
         $array=[];
@@ -11,12 +10,13 @@
             }
         }
 
-        $render = 'Database';
+        $render = '<h1>Fruit</h1>';
         $render.= '<table>';
-        $render.= '<tr><td colspan="3"><a href="">add</a></td></tr>';
+        $render.= '<tr><td colspan="3"><a href="?action=add">add</a></td></tr>';
         foreach ($array as $values){
             $render.= '<tr>
                         <td>'.$values['Name'].'</td>
+                        <td>Kleur =  '.$values['Color'].'</td>
                         <td><a href="">update</a></td>
                         <td><a href="">delete</a></td>
                     </tr>';
