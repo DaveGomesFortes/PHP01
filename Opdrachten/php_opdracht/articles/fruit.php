@@ -15,10 +15,10 @@
         $render.= '<tr><td colspan="3"><a href="?action=add">add</a></td></tr>';
         foreach ($array as $values){
             $render.= '<tr>
-                        <td>'.$values['Name'].'</td>
-                        <td>Kleur =  '.$values['Color'].'</td>
-                        <td><a href="">update</a></td>
-                        <td><a href="">delete</a></td>
+                        <td>'.$values['name'].'</td>
+                        <td>Kleur =  '.$values['color'].'</td>
+                        <td><a href="?action=update&id= '.$values['Id'].'">update</a></td>
+                        <td><a href="?action=delete&id= '.$values['Id'].'">delete</a></td>
                     </tr>';
         }
         $render.= '</table>';
